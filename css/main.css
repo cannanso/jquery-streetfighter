@@ -1,0 +1,22 @@
+html {
+  font-size: 1em;
+}
+body {
+  background-color: #000;
+}
+.container {
+  background-color: #fff;
+  margin-top: 7em;
+  padding: 0 6em;
+}
+.ryu-ready {
+  position: absolute;
+}
+.ryu-throw {
+  position: absolute;
+}
+.hadouken {
+  margin-left: -21em;
+  margin-top: 10em;
+  vertical-align: top;
+}
