@@ -5,18 +5,34 @@
 	<title></title>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Rock+Salt'>
 	<script src="http://code.jquery.com/jquery.min.js"></script>
 </head>
 <body>
-	<div class="container">
+	<header class="header">
+		<div class="container">
+			<img src="http://vignette2.wikia.nocookie.net/streetfighter/images/f/f6/SF_Logo.png/revision/latest?cb=20130310140822" alt="Streetfighter logo">
+			<img src="http://jquery.com/jquery-wp-content/themes/jquery/images/logo-jquery.png" alt="jQuery logo">
+		</div>
+	</header>
+	<div class="main">
 		<div class="ryu">
 			<div class="ryu-still"></div>
 			<div class="ryu-ready"></div>
 			<div class="ryu-throwing"></div>
+			<div class="ryu-cool"></div>
+		</div>
+		<div class="instructions">
+			<p>Hover over Ryu for his ready position</p>
+			<p>Click on Ryu to throw a hadouken</p>
+			<p>Hold down the 'x' key to see his cool stance</p>
 		</div>
 		<div class="hadouken"></div>
 	</div>
-	<audio id="hadouken-sound" src="sound/hadouken.mp3">
+	<p class="trademark">The Streetfighter logo, Ryu and his Hadoukens are all trademarks of <a href="http://www.capcom.com">Capcom</a></p>
+	<audio id="bg-sound" src="sound/nice.mp3"/>
+	<audio id="hadouken-sound" src="sound/hadouken.mp3"/>
+	<audio id="cool-sound" src="sound/cool.mp3"/>
 	<script src="js/app.js"></script>
 </body>
 </html>

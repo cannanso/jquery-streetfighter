@@ -5,9 +5,22 @@ body {
   background-color: #000;
 }
 .container {
+  width: 1200px;
+  margin: 0em auto;
+}
+.header {
+  padding: 1em;
+}
+.header img {
+  width: 140px;
+}
+.header img:last-child {
+  float: right;
+  margin-top: 1em;
+}
+.main {
   background-color: #fff;
   height: 31.250em;
-  margin-top: 7em;
   padding: 0 6em;
   position: relative;
   z-index: 1;
@@ -34,6 +47,10 @@ body {
   background: url(../images/ryu-throwing-hadouken.png) 0 0 no-repeat;
   display: none;
 }
+.ryu-cool {
+  background: url(../images/ryu-cool.gif) 0 0 no-repeat;
+  display: none;
+}
 .hadouken {
   display: none;
   background: url(../images/hadouken.gif) 0 0 no-repeat;
@@ -44,4 +61,21 @@ body {
   position: absolute;
   left: 36em;
   top: 10em;
+}
+.instructions {
+  font-family: 'Rock Salt', cursive, sans-serif;
+  font-size: 1.3em;
+  text-align: center;
+  padding-top: 2em;
+}
+.instructions p {
+  display: none;
+}
+.trademark {
+  color: #fff;
+  text-align: center;
+  font-size: .8em;
+}
+.trademark a {
+  color: teal;
 }
