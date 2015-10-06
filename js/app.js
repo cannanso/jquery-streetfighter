@@ -1,3 +1,4 @@
+
 function playHadouken() {
   $('#hadouken-sound')[0].volume = 0.5;
   $('#hadouken-sound')[0].load();
@@ -39,6 +40,19 @@ function hideInstructions() {
 	$(word).appendTo('.instructions');
 }
 
+function once(fn, context) { 
+	var result;
+
+	return function() { 
+		if(fn) {
+			result = fn.apply(context || this, arguments);
+			fn = null;
+		}
+
+		return result;
+	};
+}
+
 $(document).ready(function(){
 	playBackground();
 	showInstructions();
@@ -68,7 +82,7 @@ $(document).ready(function(){
 	$(document).keydown(function(e) {
 		if(e.which === 88){
 			$('.ryu-cool').show().siblings().hide();
-			playCool();
+			once(playCool());
 			stopBackground();
 		}
 	}).keyup(function() {
