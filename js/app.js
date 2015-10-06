@@ -40,19 +40,6 @@ function hideInstructions() {
 	$(word).appendTo('.instructions');
 }
 
-function once(fn, context) { 
-	var result;
-
-	return function() { 
-		if(fn) {
-			result = fn.apply(context || this, arguments);
-			fn = null;
-		}
-
-		return result;
-	};
-}
-
 $(document).ready(function(){
 	playBackground();
 	showInstructions();
@@ -79,10 +66,14 @@ $(document).ready(function(){
 		$('.ryu-throwing').hide();
 	});
 
+	var playing = false;
 	$(document).keydown(function(e) {
 		if(e.which === 88){
 			$('.ryu-cool').show().siblings().hide();
-			once(playCool());
+			if (playing === false) {
+				playCool();
+			}
+			playing = true;
 			stopBackground();
 		}
 	}).keyup(function() {
@@ -90,5 +81,6 @@ $(document).ready(function(){
 		$('.ryu-still').show();
 		playBackground();
 		stopPlayCool();
+		playing = false;
 	});
 });
